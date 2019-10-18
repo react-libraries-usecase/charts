@@ -1,12 +1,9 @@
 {
-  "name": "pigeon",
+  "name": "chartify",
   "version": "1.0.0",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "pigeon-maps": "^0.14.0",
-    "pigeon-marker": "^0.3.4",
-    "pigeon-overlay": "^0.2.3",
     "react": "16.10.2",
     "react-dom": "16.10.2"
   },

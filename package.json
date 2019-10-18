@@ -6,7 +6,9 @@
   ],
   "scripts": {
     "start": "lerna run start --stream --parallel",
-    "dev": "start-storybook -p 5555",
+    "dev": "npm run samples:copy && start-storybook -s ./public -p 5555",
+    "samples:copy": "npm run samples:delete && copyfiles \"packages/**/*.js\" public",
+    "samples:delete": "rimraf public/*",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "bootstrap:seprated": "lerna exec npm install",
     "build": "build-storybook -c .storybook -o public",
@@ -33,6 +35,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
+    "copyfiles": "^2.1.1",
     "eslint": "^6.5.1",
     "eslint-config-adpyke-es6": "^1.4.12",
     "eslint-plugin-import": "^2.18.2",
@@ -50,6 +53,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-test-renderer": "^16.10.2",
+    "rimraf": "^3.0.0",
     "webpack": "^4.41.0"
   },
   "dependencies": {

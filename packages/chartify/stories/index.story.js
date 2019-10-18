@@ -6,7 +6,7 @@ import NotePromise from './../notes/Basic';
 
 // wait for notes promise then show story
 NotePromise.then(notes =>
-  storiesOf('React-map-gl', module).add(
+  storiesOf('Chartify', module).add(
     'Basic',
     () => {
       const Basic = lazy(() => import('./../src/Basic/index'));
@@ -15,7 +15,6 @@ NotePromise.then(notes =>
           <Basic />
         </Suspense>
       );
-    },
-    { notes }
+    }
   )
 );

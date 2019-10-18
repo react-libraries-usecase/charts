@@ -6,10 +6,10 @@ import NotePromise from './../notes/Basic';
 
 // wait for notes promise then show story
 NotePromise.then(notes =>
-  storiesOf('Pigeon', module).add(
+  storiesOf('Recharts', module).add(
     'Basic',
     () => {
-      const Basic = lazy(() => import('./../src/Basic/index'));
+      const Basic = lazy(() => import('./../src/AreaChart'));
       return (
         <Suspense fallback={<div>Loading...</div>}>
           <Basic />
