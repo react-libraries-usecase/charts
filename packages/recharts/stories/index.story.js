@@ -11,12 +11,12 @@ NotePromise.then(notes =>
   storiesOf('Recharts', module)
     .addDecorator(withSmartKnobs)
     .addDecorator(withKnobs)
-
-    .add('with a button', () => (
-      <button disabled={boolean('Disabled', false)} >
-        {text('Label', 'Hello Storybook')}
-      </button>
-    ))
+    //
+    // .add('with a button', () => (
+    //   <button disabled={boolean('Disabled', false)} >
+    //     {text('Label', 'Hello Storybook')}
+    //   </button>
+    // ))
 
     .add(
     'Basic',
