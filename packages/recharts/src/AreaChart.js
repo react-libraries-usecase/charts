@@ -125,7 +125,7 @@ const renderLabel = props => {
   );
 };
 
-export default class AreaChartDemo extends Component {
+class AreaChartDemo extends Component {
   static displayName = 'AreaChartDemo';
 
   state = initialState;
@@ -473,3 +473,5 @@ export default class AreaChartDemo extends Component {
     );
   }
 }
+
+export default AreaChartDemo;

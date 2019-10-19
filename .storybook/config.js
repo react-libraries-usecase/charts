@@ -19,7 +19,7 @@ function loadStories() {
 
 // addDecorator(withInfo);
 
-// addDecorator(withSmartKnobs);
+
 addDecorator(withKnobs);
 
 configure(loadStories, module);

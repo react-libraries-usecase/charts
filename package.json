@@ -27,6 +27,8 @@
     "@babel/core": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
+    "@storybook/addon-actions": "^5.2.4",
+    "@storybook/addon-knobs": "^5.2.4",
     "@storybook/addon-notes": "^5.2.3",
     "@storybook/addon-viewport": "^5.2.3",
     "@storybook/react": "^5.2.3",
@@ -54,12 +56,11 @@
     "react-dom": "^16.10.2",
     "react-test-renderer": "^16.10.2",
     "rimraf": "^3.0.0",
+    "storybook-addon-smart-knobs": "^5.0.0",
     "webpack": "^4.41.0"
   },
   "dependencies": {
-    "@storybook/addon-knobs": "^5.2.4",
     "react-router-dom": "^5.1.2",
-    "storybook-addon-smart-knobs": "^5.0.0",
     "styled-components": "^4.4.0"
   }
 }
