@@ -57,7 +57,9 @@
     "webpack": "^4.41.0"
   },
   "dependencies": {
+    "@storybook/addon-knobs": "^5.2.4",
     "react-router-dom": "^5.1.2",
+    "storybook-addon-smart-knobs": "^5.0.0",
     "styled-components": "^4.4.0"
   }
 }

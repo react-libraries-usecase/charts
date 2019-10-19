@@ -1,5 +1,6 @@
 // import '@storybook/addon-storysource/register';
 import '@storybook/addon-viewport/register';
+import '@storybook/addon-knobs/register';
 
 // register the notes addon as a tab
 import '@storybook/addon-notes/register';

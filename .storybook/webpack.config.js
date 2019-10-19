@@ -12,3 +12,11 @@
 //
 //   return config;
 // };
+//
+// module.exports = (baseConfig, env, defaultConfig) => {
+//   defaultConfig.module.rules[0].use[0].options.plugins = [
+//     require.resolve('babel-plugin-react-docgen'),
+//   ]
+//
+//   return defaultConfig
+// }

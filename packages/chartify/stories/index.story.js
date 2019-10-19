@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from 'react';
 import { storiesOf } from '@storybook/react';
 
 // import notes with promise
-import NotePromise from './../notes/Basic';
+// import NotePromise from './../notes/Basic';
 
 // wait for notes promise then show story
-NotePromise.then(notes =>
+// NotePromise.then(notes =>
   storiesOf('Chartify', module).add(
     'Basic',
     () => {
@@ -17,4 +17,4 @@ NotePromise.then(notes =>
       );
     }
   )
-);
+// );

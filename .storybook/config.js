@@ -1,8 +1,9 @@
-import {addDecorator, configure} from '@storybook/react';
-// import { withInfo } from '@storybook/addon-info';
+import {addDecorator, configure,storiesOf} from '@storybook/react';
 import { addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
+import { withKnobs } from '@storybook/addon-knobs'
+// import { withSmartKnobs } from 'storybook-addon-smart-knobs'
 
 addParameters({
   viewport: {
@@ -17,4 +18,8 @@ function loadStories() {
 }
 
 // addDecorator(withInfo);
+
+// addDecorator(withSmartKnobs);
+addDecorator(withKnobs);
+
 configure(loadStories, module);
