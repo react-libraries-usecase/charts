@@ -167,4 +167,121 @@ NotePromise.then(notes =>
       },
       { notes }
     )
+    .add(
+      'RotatedBar',
+      () => {
+        const Basic = lazy(() => import('./../src/BarCharts/RotatedBar'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
+
+    // LINE CHARTS
+    .add(
+      'LineChart/Simple',
+      () => {
+        const Basic = lazy(() => import('./../src/LineCharts/Simple'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
+    .add(
+      'LineChart/Spline',
+      () => {
+        const Basic = lazy(() => import('./../src/LineCharts/Spline'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
+    .add(
+      'LineChart/StepLine',
+      () => {
+        const Basic = lazy(() => import('./../src/LineCharts/StepLine'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
+
+    // POINT CHARTS
+    .add(
+      'PointCharts/Simple',
+      () => {
+        const Basic = lazy(() => import('./../src/PointCharts/Simple'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
+
+    // PIE CHARTS
+    .add(
+      'PieCharts/Pie',
+      () => {
+        const Basic = lazy(() => import('./../src/PieCharts/Pie'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
+    .add(
+      'PieCharts/Doughnut',
+      () => {
+        const Basic = lazy(() => import('./../src/PieCharts/Doughnut'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
+
+
+    // ADVANCED
+    .add(
+      'Advanced/Zoom',
+      () => {
+        const Basic = lazy(() => import('./../src/Advanced/Zoom'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
+    .add(
+      'Advanced/Export',
+      () => {
+        const Basic = lazy(() => import('./../src/Advanced/Export'));
+        return (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Basic />
+          </Suspense>
+        );
+      },
+      { notes }
+    )
 );
