@@ -19,7 +19,7 @@ NotePromise.then(notes =>
     // ))
 
     .add(
-      'SimpleArea',
+      'AreaCharts/SimpleArea',
       () => {
         const Basic = lazy(() => import('./../src/AreaCharts/SimpleArea'));
         return (
@@ -32,7 +32,7 @@ NotePromise.then(notes =>
     )
 
     .add(
-      'SplineArea',
+      'AreaCharts/SplineArea',
       () => {
         const Basic = lazy(() => import('./../src/AreaCharts/SplineArea'));
         return (
@@ -45,7 +45,7 @@ NotePromise.then(notes =>
     )
 
     .add(
-      'StackedArea',
+      'AreaCharts/StackedArea',
       () => {
         const Basic = lazy(() => import('./../src/AreaCharts/StackedArea'));
         return (
@@ -57,7 +57,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'StepArea',
+      'AreaCharts/StepArea',
       () => {
         const Basic = lazy(() => import('./../src/AreaCharts/StepArea'));
         return (
@@ -69,7 +69,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'StreamGraph',
+      'AreaCharts/StreamGraph',
       () => {
         const Basic = lazy(() => import('./../src/AreaCharts/StreamGraph'));
         return (
@@ -84,7 +84,7 @@ NotePromise.then(notes =>
 
   // BAR CHARTS
     .add(
-      'SimpleBarChart',
+      'BarCharts/Simple',
       () => {
         const Basic = lazy(() => import('./../src/BarCharts/SimpleBar'));
         return (
@@ -96,7 +96,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'SideBySide',
+      'BarCharts/SideBySide',
       () => {
         const Basic = lazy(() => import('./../src/BarCharts/SideBySide'));
         return (
@@ -108,7 +108,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'SideBySideStacked',
+      'BarCharts/SideBySideStacked',
       () => {
         const Basic = lazy(() => import('./../src/BarCharts/SideBySideStacked'));
         return (
@@ -120,7 +120,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'StackedBar',
+      'BarCharts/Stacked',
       () => {
         const Basic = lazy(() => import('./../src/BarCharts/StackedBar'));
         return (
@@ -132,7 +132,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'FullStacked',
+      'BarCharts/FullStacked',
       () => {
         const Basic = lazy(() => import('./../src/BarCharts/FullStacked'));
         return (
@@ -144,7 +144,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'CustomBar',
+      'BarCharts/Custom',
       () => {
         const Basic = lazy(() => import('./../src/BarCharts/CustomBar'));
         return (
@@ -156,7 +156,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'SeriesInteraction',
+      'BarCharts/SeriesInteraction',
       () => {
         const Basic = lazy(() => import('./../src/BarCharts/SeriesInteraction'));
         return (
@@ -168,7 +168,7 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'RotatedBar',
+      'BarCharts/Rotated',
       () => {
         const Basic = lazy(() => import('./../src/BarCharts/RotatedBar'));
         return (
