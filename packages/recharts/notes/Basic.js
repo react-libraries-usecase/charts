@@ -9,8 +9,4 @@ const text = `
 ~~~
 `;
 
-
-export default withPromise(
-  text,
-  require.resolve('./../index')
-);
+export default withPromise(text, require.resolve('./../index'));

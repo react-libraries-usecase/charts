@@ -2,9 +2,7 @@
  * change number in data
  */
 
-const randomChangeArray = (array) => {
-
-};
+const randomChangeArray = array => {};
 
 export function changeNumberOfData(data) {
   if (Array.isArray(data)) {

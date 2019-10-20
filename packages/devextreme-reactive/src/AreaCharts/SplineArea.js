@@ -6,14 +6,11 @@ import {
   ValueAxis,
   AreaSeries,
   Title,
-  Legend,
+  Legend
 } from '@devexpress/dx-react-chart-material-ui';
 import { withStyles } from '@material-ui/core/styles';
 import { ArgumentScale, Animation } from '@devexpress/dx-react-chart';
-import {
-  curveCatmullRom,
-  area,
-} from 'd3-shape';
+import { curveCatmullRom, area } from 'd3-shape';
 import { scalePoint } from 'd3-scale';
 
 const data = [
@@ -28,14 +25,14 @@ const data = [
   { month: 'Sep', appStore: 112, googlePlay: 27 },
   { month: 'Oct', appStore: 111, googlePlay: 30 },
   { month: 'Nov', appStore: 120, googlePlay: 35 },
-  { month: 'Dec', appStore: 160, googlePlay: 45 },
+  { month: 'Dec', appStore: 160, googlePlay: 45 }
 ];
 const legendStyles = () => ({
   root: {
     display: 'flex',
     margin: 'auto',
-    flexDirection: 'row',
-  },
+    flexDirection: 'row'
+  }
 });
 const legendRootBase = ({ classes, ...restProps }) => (
   <Legend.Root {...restProps} className={classes.root} />
@@ -43,17 +40,19 @@ const legendRootBase = ({ classes, ...restProps }) => (
 const Root = withStyles(legendStyles, { name: 'LegendRoot' })(legendRootBase);
 const legendLabelStyles = () => ({
   label: {
-    whiteSpace: 'nowrap',
-  },
+    whiteSpace: 'nowrap'
+  }
 });
 const legendLabelBase = ({ classes, ...restProps }) => (
   <Legend.Label className={classes.label} {...restProps} />
 );
-const Label = withStyles(legendLabelStyles, { name: 'LegendLabel' })(legendLabelBase);
+const Label = withStyles(legendLabelStyles, { name: 'LegendLabel' })(
+  legendLabelBase
+);
 const demoStyles = () => ({
   chart: {
-    paddingRight: '20px',
-  },
+    paddingRight: '20px'
+  }
 });
 
 const Area = props => (
@@ -72,7 +71,7 @@ class Demo extends React.PureComponent {
     super(props);
 
     this.state = {
-      data,
+      data
     };
   }
 
@@ -81,10 +80,7 @@ class Demo extends React.PureComponent {
     const { classes } = this.props;
     return (
       <Paper>
-        <Chart
-          data={chartData}
-          className={classes.chart}
-        >
+        <Chart data={chartData} className={classes.chart}>
           <ArgumentScale factory={scalePoint} />
           <ArgumentAxis />
           <ValueAxis />
@@ -102,7 +98,11 @@ class Demo extends React.PureComponent {
             seriesComponent={Area}
           />
           <Animation />
-          <Legend position="bottom" rootComponent={Root} labelComponent={Label} />
+          <Legend
+            position="bottom"
+            rootComponent={Root}
+            labelComponent={Label}
+          />
           <Title text="iOS App Store vs Google Play Revenue in 2012" />
         </Chart>
       </Paper>

@@ -6,15 +6,12 @@ import {
   ValueAxis,
   LineSeries,
   Title,
-  Legend,
+  Legend
 } from '@devexpress/dx-react-chart-material-ui';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { ArgumentScale, Animation } from '@devexpress/dx-react-chart';
-import {
-  curveCatmullRom,
-  line,
-} from 'd3-shape';
+import { curveCatmullRom, line } from 'd3-shape';
 import { scalePoint } from 'd3-scale';
 
 import { energyConsumption as data } from './../data-virtualization';
@@ -33,10 +30,10 @@ const titleStyles = {
   title: {
     textAlign: 'center',
     width: '100%',
-    marginBottom: '10px',
-  },
+    marginBottom: '10px'
+  }
 };
-const Text = withStyles(titleStyles)((props) => {
+const Text = withStyles(titleStyles)(props => {
   const { text, classes } = props;
   const [mainText, subText] = text.split('\\n');
   return (
@@ -53,19 +50,19 @@ const legendStyles = () => ({
   root: {
     display: 'flex',
     margin: 'auto',
-    flexDirection: 'row',
-  },
+    flexDirection: 'row'
+  }
 });
 const legendLabelStyles = theme => ({
   label: {
     marginBottom: theme.spacing(1),
-    whiteSpace: 'nowrap',
-  },
+    whiteSpace: 'nowrap'
+  }
 });
 const legendItemStyles = () => ({
   item: {
-    flexDirection: 'column-reverse',
-  },
+    flexDirection: 'column-reverse'
+  }
 });
 
 const legendRootBase = ({ classes, ...restProps }) => (
@@ -78,12 +75,16 @@ const legendItemBase = ({ classes, ...restProps }) => (
   <Legend.Item className={classes.item} {...restProps} />
 );
 const Root = withStyles(legendStyles, { name: 'LegendRoot' })(legendRootBase);
-const Label = withStyles(legendLabelStyles, { name: 'LegendLabel' })(legendLabelBase);
-const Item = withStyles(legendItemStyles, { name: 'LegendItem' })(legendItemBase);
+const Label = withStyles(legendLabelStyles, { name: 'LegendLabel' })(
+  legendLabelBase
+);
+const Item = withStyles(legendItemStyles, { name: 'LegendItem' })(
+  legendItemBase
+);
 const demoStyles = () => ({
   chart: {
-    paddingRight: '30px',
-  },
+    paddingRight: '30px'
+  }
 });
 
 class Demo extends React.PureComponent {
@@ -91,7 +92,7 @@ class Demo extends React.PureComponent {
     super(props);
 
     this.state = {
-      data,
+      data
     };
   }
 
@@ -101,10 +102,7 @@ class Demo extends React.PureComponent {
 
     return (
       <Paper>
-        <Chart
-          data={chartData}
-          className={classes.chart}
-        >
+        <Chart data={chartData} className={classes.chart}>
           <ArgumentScale factory={scalePoint} />
           <ArgumentAxis />
           <ValueAxis />
@@ -139,7 +137,12 @@ class Demo extends React.PureComponent {
             argumentField="country"
             seriesComponent={Line}
           />
-          <Legend position="bottom" rootComponent={Root} itemComponent={Item} labelComponent={Label} />
+          <Legend
+            position="bottom"
+            rootComponent={Root}
+            itemComponent={Item}
+            labelComponent={Label}
+          />
           <Title
             text="Energy Consumption in 2004\n(Millions of Tons, Oil Equivalent)"
             textComponent={Text}

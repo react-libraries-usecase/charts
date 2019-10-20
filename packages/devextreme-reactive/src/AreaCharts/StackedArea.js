@@ -6,45 +6,48 @@ import {
   ValueAxis,
   AreaSeries,
   Title,
-  Legend,
+  Legend
 } from '@devexpress/dx-react-chart-material-ui';
 import classNames from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import { Stack, Animation } from '@devexpress/dx-react-chart';
 import { carbonEmmision as data } from './../data-virtualization';
 
-const setStyle = (style) => {
+const setStyle = style => {
   const wrap = withStyles({ root: style });
-  return Target => wrap(({ classes, className, ...restProps }) => (
-    <Target className={classNames(classes.root, className)} {...restProps} />
-  ));
+  return Target =>
+    wrap(({ classes, className, ...restProps }) => (
+      <Target className={classNames(classes.root, className)} {...restProps} />
+    ));
 };
 
 const LegendRoot = setStyle({
   display: 'flex',
   margin: 'auto',
-  flexDirection: 'row',
+  flexDirection: 'row'
 })(Legend.Root);
 
 const LegendLabel = setStyle({
-  whiteSpace: 'nowrap',
+  whiteSpace: 'nowrap'
 })(Legend.Label);
 
 const ChartRoot = setStyle({
-  paddingRight: '20px',
+  paddingRight: '20px'
 })(Chart.Root);
 
 const format = () => tick => tick;
-const stacks = [{
-  series: ['Liquids', 'Solids', 'Gas', 'Cement Production', 'Gas Flaring'],
-}];
+const stacks = [
+  {
+    series: ['Liquids', 'Solids', 'Gas', 'Cement Production', 'Gas Flaring']
+  }
+];
 
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      data,
+      data
     };
   }
 
@@ -52,10 +55,7 @@ export default class Demo extends React.PureComponent {
     const { data: chartData } = this.state;
     return (
       <Paper>
-        <Chart
-          data={chartData}
-          rootComponent={ChartRoot}
-        >
+        <Chart data={chartData} rootComponent={ChartRoot}>
           <ArgumentAxis tickFormat={format} />
           <ValueAxis />
           <AreaSeries
@@ -63,16 +63,8 @@ export default class Demo extends React.PureComponent {
             valueField="liquids"
             argumentField="year"
           />
-          <AreaSeries
-            name="Solids"
-            valueField="solids"
-            argumentField="year"
-          />
-          <AreaSeries
-            name="Gas"
-            valueField="gas"
-            argumentField="year"
-          />
+          <AreaSeries name="Solids" valueField="solids" argumentField="year" />
+          <AreaSeries name="Gas" valueField="gas" argumentField="year" />
           <AreaSeries
             name="Cement Production"
             valueField="cementProduction"
@@ -84,7 +76,11 @@ export default class Demo extends React.PureComponent {
             argumentField="year"
           />
           <Animation />
-          <Legend position="bottom" rootComponent={LegendRoot} labelComponent={LegendLabel} />
+          <Legend
+            position="bottom"
+            rootComponent={LegendRoot}
+            labelComponent={LegendLabel}
+          />
           <Title text="Carbon Emission Estimates" />
           <Stack stacks={stacks} />
         </Chart>

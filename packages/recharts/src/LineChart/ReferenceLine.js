@@ -56,8 +56,6 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/wpfnfmh7/';
-
   render() {
     return (
       <LineChart

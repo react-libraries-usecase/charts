@@ -81,8 +81,7 @@ NotePromise.then(notes =>
       { notes }
     )
 
-
-  // BAR CHARTS
+    // BAR CHARTS
     .add(
       'BarCharts/Simple',
       () => {
@@ -110,7 +109,9 @@ NotePromise.then(notes =>
     .add(
       'BarCharts/SideBySideStacked',
       () => {
-        const Basic = lazy(() => import('./../src/BarCharts/SideBySideStacked'));
+        const Basic = lazy(() =>
+          import('./../src/BarCharts/SideBySideStacked')
+        );
         return (
           <Suspense fallback={<div>Loading...</div>}>
             <Basic />
@@ -158,7 +159,9 @@ NotePromise.then(notes =>
     .add(
       'BarCharts/SeriesInteraction',
       () => {
-        const Basic = lazy(() => import('./../src/BarCharts/SeriesInteraction'));
+        const Basic = lazy(() =>
+          import('./../src/BarCharts/SeriesInteraction')
+        );
         return (
           <Suspense fallback={<div>Loading...</div>}>
             <Basic />
@@ -257,7 +260,6 @@ NotePromise.then(notes =>
       },
       { notes }
     )
-
 
     // ADVANCED
     .add(

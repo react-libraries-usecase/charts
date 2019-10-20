@@ -20,7 +20,7 @@
     "lint:eslint": "eslint --ignore-path .gitignore packages",
     "lint:eslint:fix": "eslint --ignore-path .gitignore packages --fix",
     "lint:js": "npm run lint:eslint -- . ",
-    "prettify": "prettier --write packages/**/*.js"
+    "prettify": "prettier --write packages/**/*.js packages/**/**/*.js packages/**/**/**/*.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.3",
