@@ -729,9 +729,9 @@ NotePromise.then(notes =>
 
 //  TREEMAP
     .add(
-      'Treemap/SimpleTreemap',
+      'TreeMap/SimpleTreemap',
       () => {
-        const Basic = lazy(() => import('./../src/Treemap/SimpleTreemap'));
+        const Basic = lazy(() => import('./../src/TreeMap/SimpleTreemap'));
         return (
           <Suspense fallback={<div>Loading...</div>}>
             <Basic />
@@ -741,9 +741,9 @@ NotePromise.then(notes =>
       { notes }
     )
     .add(
-      'Treemap/CustomContentTreemap',
+      'TreeMap/CustomContentTreemap',
       () => {
-        const Basic = lazy(() => import('./../src/Treemap/CustomContentTreemap'));
+        const Basic = lazy(() => import('./../src/TreeMap/CustomContentTreemap'));
         return (
           <Suspense fallback={<div>Loading...</div>}>
             <Basic />
