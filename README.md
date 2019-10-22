@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./logo.png2" alt="react animate popular ways" />
+    <img src="./logo.png" alt="react chart making popular ways" />
 </p>
 
 <h1>Making charts full examples</h1>
